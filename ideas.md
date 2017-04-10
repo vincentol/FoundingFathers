@@ -16,3 +16,11 @@ ideas.md
 6) Surge/Prime Time analyzer
   - view surge/prime time pricing multipliers and areas
   - make informed decisions about where/when to order rides
+7) Share real-time Location
+  - share location with friend for finding each other 
+  - can clearly see friend's location on map and follow the route to find him
+  - greatly decrease useless and time-consuming literal communication
+8) Activity Finder
+  - find locations of present activities or event held in school especially when users forget the name of the building
+  - users can type in the name of the activity or event to find where it is held at
+  - for guests or freshmen to explore the whole campus and participate in various activities
