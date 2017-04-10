@@ -20,3 +20,9 @@ Robert Arin:
 Scavenger Hunt: http://imgur.com/a/kpt5C
 Marco Polo thing: http://imgur.com/a/jyJY5
 
+Vincent Lim:
+
+Marco Polo app #2: http://imgur.com/EfvbOEd
+![alt text](http://imgur.com/EfvbOEd)
+Find Office Hours: http://imgur.com/tI75u09
+![alt text](http://imgur.com/tI75u09)
