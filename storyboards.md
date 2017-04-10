@@ -14,3 +14,9 @@ Storyboard 7: http://imgur.com/a/FXlX5
 ![alt text](http://i.imgur.com/VoyFkv7.jpg)
 Storyboard 8: http://imgur.com/a/nzGW5
 ![alt text](http://i.imgur.com/nL7Y7V8.jpg)
+
+Robert Arin:
+
+Scavenger Hunt: http://imgur.com/a/kpt5C
+Marco Polo thing: http://imgur.com/a/jyJY5
+
