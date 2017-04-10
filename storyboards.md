@@ -25,6 +25,6 @@ Marco Polo thing: http://imgur.com/a/jyJY5
 Vincent Lim:
 
 Marco Polo app #2: http://imgur.com/EfvbOEd
-![alt text](http://imgur.com/EfvbOEd)
+![alt text](http://i.imgur.com/gsNfqgr.jpg)
 Find Office Hours: http://imgur.com/tI75u09
-![alt text](http://imgur.com/tI75u09)
+![alt text](http://i.imgur.com/gsNfqgr.jpg)
