@@ -18,7 +18,9 @@ Storyboard 8: http://imgur.com/a/nzGW5
 Robert Arin:
 
 Scavenger Hunt: http://imgur.com/a/kpt5C
+![alt text](http://i.imgur.com/QqMcshM.png)
 Marco Polo thing: http://imgur.com/a/jyJY5
+![alt text](http://i.imgur.com/cJIotrq.png)
 
 Vincent Lim:
 
