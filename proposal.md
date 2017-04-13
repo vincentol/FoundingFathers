@@ -19,6 +19,8 @@ Team K5 stated that we should consider connect uber and this apps functionality.
 In the end, we settled on this idea because it had a more general audience and solved a real problem that exists today (some things mentioned by the TA and other teams in person)
 
 Project's Features:
-- 
+- Shows regions of increased pricing on a map (possibly color coded)
+- Click on a region to show an estimated fare cost
+- Suggests a pick-up location based on walking/money saving ratio
 
 How programming work will be split:
