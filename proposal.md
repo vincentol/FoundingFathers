@@ -5,7 +5,7 @@ Summary:
 An intuitive way to compare ride fare prices for nearby areas, encouraging people to walk a little to save money.
 
 Storyboard:
-
+![img](https://puu.sh/vf1He/a5f9160c57.png)
 
 Feedback taken:
 Our TA (Kandarp) says that we should consider whether or not if people would use this application (what incentive do they have).
