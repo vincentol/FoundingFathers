@@ -26,3 +26,6 @@ Project's Features:
 
 How programming work will be split:
 Vincent - Front-end
+Ruoqi - Front-end
+Robbie - Back-end
+Sean - Back-end
