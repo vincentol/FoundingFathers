@@ -1,4 +1,4 @@
-Project Title:
+Project Title: Fare Rides
 
 Summary:
 A means for Uber and Lyft customers to visualize dynamic pricing (Surge/Prime Time) and make informed decisions to avoid inflated rates.
@@ -25,3 +25,4 @@ Project's Features:
 - Suggests a pick-up location based on walking/money saving ratio
 
 How programming work will be split:
+Vincent - Front-end
