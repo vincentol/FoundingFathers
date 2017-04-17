@@ -1,4 +1,4 @@
-Project Title: Fare Rides
+Project Title: RideFare
 
 Summary:
 A means for Uber and Lyft customers to visualize dynamic pricing (Surge/Prime Time) and make informed decisions to avoid inflated rates.
