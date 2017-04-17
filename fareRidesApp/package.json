@@ -1,0 +1,25 @@
+{
+  "name": "Fare Rides",
+  "version": "0.0.1",
+  "author": "Vincent Lim, Rouqi Liu, Robbie Arin, Sean Gao",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VincentOL/FoundingFathers"
+  },
+  "license": "MIT",
+
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }  
+}
