@@ -16,3 +16,9 @@ Prototype 1: https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/18034734_1015531122
 Ruoqi Liu:
 http://imgur.com/a/wMbGB
 This prototype shows options for users to avoid surge time. Two main options: WALK or WAIT. For WALK, its shows route to a near location without surge, users can also click option 1 button to jump to Google map seeing route and order a uber later. For WAIT, users just wait at their present location until no surge or low surge in this area. Also, it shows a probable fare and savings to user. By using our app, users can better schedule their rides(more freedom and saving money!)
+
+  Vincent:
+  Prototype 4: https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049810_1482072271832404_1830639250_o.jpg?oh=e760c3f32110cac9e262585301ed810d&oe=58FA20A7
+  ![alt text](https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049810_1482072271832404_1830639250_o.jpg?oh=e760c3f32110cac9e262585301ed810d&oe=58FA20A7)
+
+  This prototype shows an alternative version for user interaction. The user will put search preferences first before seeing the map. Afterwards, a map will be displayed based on the search preferences. The map is split up into hexagons that have different colors (to represent pricing based on surge rate). These hexagons are clickable to show walking distance and estimated cost. There is also a slider on the bottom to compare the current time with different times of the day.
