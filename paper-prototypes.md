@@ -11,3 +11,8 @@ Prototype 1: https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/18034734_1015531122
  ![alt text](https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/18035066_1508098699232184_1155042154_n.jpg?oh=fa88ac45cb943697a8c5169df308848c&oe=58FA8C12)
 
  Prototype shows overlay toggle (Surge vs Prime Time) and interaction with suggestions. Selection brings up a menu, wherein the only option (presently) is to order the currently active service at the suggested location. This sends the user to the associated app with the location preset.
+ 
+ 
+Ruoqi Liu:
+http://imgur.com/a/wMbGB
+This prototype shows options for users to avoid surge time. Two main options: WALK or WAIT. For WALK, its shows route to a near location without surge, users can also click option 1 button to jump to Google map seeing route and order a uber later. For WAIT, users just wait at their present location until no surge or low surge in this area. Also, it shows a probable fare and savings to user. By using our app, users can better schedule their rides(more freedom and saving money!)
