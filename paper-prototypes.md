@@ -13,7 +13,7 @@ Prototype 1: https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/18034734_1015531122
  
 Ruoqi Liu:
 Prototype 3: http://imgur.com/a/wMbGB
-![alt text](http://imgur.com/a/wMbGB)
+![alt text](http://imgur.com/a/wMbGB.jpg)
 This prototype shows options for users to avoid surge time. Two main options: WALK or WAIT. For WALK, its shows route to a near location without surge, users can also click option 1 button to jump to Google map seeing route and order a uber later. For WAIT, users just wait at their present location until no surge or low surge in this area. Also, it shows a probable fare and savings to user. By using our app, users can better schedule their rides(more freedom and saving money!)
 
 Vincent:
