@@ -12,8 +12,18 @@ Prototype 1: https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/18034734_1015531122
  
  
 Ruoqi Liu:
-Prototype 3: https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049749_130506820824960_911384600_o.jpg?oh=8b8f26be7a066aa14f31a83c28fbb343&oe=58FA4338
-![alt text](https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049749_130506820824960_911384600_o.jpg?oh=8b8f26be7a066aa14f31a83c28fbb343&oe=58FA4338)
+Prototype 3-1:
+http://imgur.com/a/8ktnG
+
+This prototype shows four steps of interacton. 
+1. Enter your destination in search bar. 
+2. Select the surge options(with No surge as default). 
+3. Press Refresh Button and it will show some locations near you with no surge or low surge. 
+4. Choose a location to go to or Wait and Refresh the page until no surge in your current position.
+
+Prototype 3-2: 
+http://imgur.com/a/FGhQ6
+
 This prototype shows options for users to avoid surge time. Two main options: WALK or WAIT. For WALK, its shows route to a near location without surge, users can also click option 1 button to jump to Google map seeing route and order a uber later. For WAIT, users just wait at their present location until no surge or low surge in this area. Also, it shows a probable fare and savings to user. By using our app, users can better schedule their rides(more freedom and saving money!)
 
 Vincent:
