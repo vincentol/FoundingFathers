@@ -8,6 +8,9 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/fare.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+    integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+    crossorigin=""/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,11 +37,9 @@
       <img id="photo" class='img-responsive' src="images/lorempixel.people.1.jpeg" />
     </div>
 
+    <!-- Leaflet map here -->
+    <div id="mapid"></div>
 
-    <div id="googleMaps" class="profile">
-      <h1>Where am I?</h1>
-      <div id="map"></div>
-    </div>
   </div>
 
 
@@ -50,7 +51,9 @@
   <script src="/js/facebook.js"></script>
   {{> googleMaps}}
   <script src="/js/googleMaps.js"></script>
-  <script src="/js/camera.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+    integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+    crossorigin=""></script>
 
 </body>
 </html>

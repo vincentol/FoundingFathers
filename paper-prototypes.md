@@ -28,5 +28,5 @@ This prototype shows options for users to avoid surge time. Two main options: WA
 
 Vincent:
 Prototype 4: https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049810_1482072271832404_1830639250_o.jpg?oh=e760c3f32110cac9e262585301ed810d&oe=58FA20A7
-![alt text](https://scontent-lax3-2.xx.fbcdn.net/v/t35.0-12/18049810_1482072271832404_1830639250_o.jpg?oh=e760c3f32110cac9e262585301ed810d&oe=58FA20A7)
+[Imgur](http://i.imgur.com/NThkMpe.jpg)
   This prototype shows an alternative version for user interaction. The user will put search preferences first before seeing the map. Afterwards, a map will be displayed based on the search preferences. The map is split up into hexagons that have different colors (to represent pricing based on surge rate). These hexagons are clickable to show walking distance and estimated cost. There is also a slider on the bottom to compare the current time with different times of the day.
