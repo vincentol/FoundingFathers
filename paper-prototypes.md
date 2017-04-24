@@ -1,8 +1,8 @@
 paper-prototypes.md
 
 Robert:
-Prototype 1: http://imgur.com/a/0TWmi
-![alt text](http://imgur.com/a/0TWmi)
+Prototype 1: http://i.imgur.com/iojut5x.jpg
+![alt text](http://i.imgur.com/iojut5x.jpg)
   This prototype shows the users going through a route options menu to find their preferred cost-saving strategy. This is sort of similar to the google maps route options.
 
  Sean:
