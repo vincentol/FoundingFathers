@@ -53,14 +53,27 @@ var hexgrid = turf.hexGrid(bbox, cellWidth, units);
 //    .setView([35.463453, -102.508014], 4)
 //    .featureLayer.setGeoJSON(hexgrid);
 
+arr = [];
+arr.length = 1000;
+let i = 0;
+while (i < 1000) {
+  arr[i] = 0;
+  i++;
+}
+
+arr[450] = 100;
+arr[451] = 200
+arr[452] = 300;
+arr[453] = 500;
+
 for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
-  hexgrid.features[x].properties['pt_count'] = x;
+  hexgrid.features[x].properties['pt_count'] = arr[x];
 }
 
 L.geoJson(hexgrid, {onEachFeature: onEachHex}).addTo(map);
 
 function getRandomCoordinates(radius, uniform) {
-  // Generate two random numbers
+  // Generate two random numbers1
   var a = Math.random(),
     b = Math.random();
 
@@ -131,7 +144,7 @@ var hexlegend = L.control({
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [1, 2, 5, 10, 20, 50, 100],
+    grades = [40, 80, 100, 180, 390, 450, 580],
     labels = ['<strong>Point Count</strong>'],
     from, to;
 
@@ -161,13 +174,13 @@ var hexStyleHighlight = {
 //create color ramp
 function getColor(y) {
   return y == undefined ? '#888' :
-    y < 1 ? '#ffffe9' :
-    y < 2 ? '#edf8b1' :
-    y < 5 ? '#c7e9b4' :
-    y < 10 ? '#7fcdbb' :
-    y < 20 ? '#41b6c4' :
-    y < 50 ? '#1d91c0' :
-    y < 100 ? '#225ea8' :
+    y < 40 ? '#ffffe9' :
+    y < 80 ? '#edf8b1' :
+    y < 100 ? '#c7e9b4' :
+    y < 180 ? '#7fcdbb' :
+    y < 390 ? '#41b6c4' :
+    y < 450 ? '#1d91c0' :
+    y < 490 ? '#225ea8' :
     '#0c2c84';
 }
 
