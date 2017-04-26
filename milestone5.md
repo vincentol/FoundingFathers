@@ -1,10 +1,10 @@
-Vincent: (Implemented foundational functionality.)
+Vincent: (Implemented foundational functionality, the hexagon grid)
 
 Ruoqi: (adding leaflet, refresh button and search bar)
 
 Sean: Reformatted page. Removed extraneous UI elements, replaced with meaningful elements. Updated documentation.
 
-Robert: Wrote a bit of this markdown file. Contributed ideas
+Robert: Wrote a bit of this markdown file. Contributed ideas and key design decisions
 
 Screenshot:
 ![Screenshot of core map functionality:](http://i.imgur.com/dZsgU8v.png)
