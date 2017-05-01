@@ -36,8 +36,9 @@ var dotcount = 200000;
 var dots = make_dots(dotcount);
 
 //parameters for hex grid
-var bbox = [-117.341445, 32.778486, -116.241435, 32.978486];
-var cellWidth = .5;
+//var bbox = [-117.341445, 32.778486, -116.241435, 32.978486];
+var bbox = [-117.3, 32.8, -117.15, 32.95];
+var cellWidth = 0.4;
 var units = 'miles';
 
 //create hex grid and count points within each cell
@@ -61,10 +62,36 @@ while (i < 1000) {
   i++;
 }
 
-arr[450] = 100;
-arr[451] = 200
-arr[452] = 300;
-arr[453] = 500;
+//center
+arr[299] = 700;
+
+//1 away
+arr[272] = 500;
+arr[273] = 300;
+
+arr[298] = 500;
+arr[300] = 300;
+
+arr[324] = 700;
+arr[325] = 200;
+
+//2 away
+arr[246] = 000;
+arr[247] = 000;
+arr[248] = 000;
+
+arr[271] = 100;
+arr[274] = 100;
+
+arr[297] = 100;
+arr[301] = 000;
+
+arr[323] = 200;
+arr[326] = 100;
+
+arr[350] = 400;
+arr[351] = 300;
+arr[352] = 000;
 
 for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
   hexgrid.features[x].properties['pt_count'] = arr[x];
@@ -144,7 +171,7 @@ var hexlegend = L.control({
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [40, 80, 100, 180, 390, 450, 580],
+    grades = [100, 200, 300, 400, 500, 600, 700],
     labels = ['<strong>Point Count</strong>'],
     from, to;
 
@@ -174,13 +201,13 @@ var hexStyleHighlight = {
 //create color ramp
 function getColor(y) {
   return y == undefined ? '#888' :
-    y < 40 ? '#ffffe9' :
-    y < 80 ? '#edf8b1' :
-    y < 100 ? '#c7e9b4' :
-    y < 180 ? '#7fcdbb' :
-    y < 390 ? '#41b6c4' :
-    y < 450 ? '#1d91c0' :
-    y < 490 ? '#225ea8' :
+    y < 100 ? '#ffffe9' :
+    y < 200 ? '#edf8b1' :
+    y < 300 ? '#c7e9b4' :
+    y < 400 ? '#7fcdbb' :
+    y < 500 ? '#41b6c4' :
+    y < 600 ? '#1d91c0' :
+    y < 700 ? '#225ea8' :
     '#0c2c84';
 }
 
