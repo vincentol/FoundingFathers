@@ -249,6 +249,7 @@ function style(feature) {
   };
 }
 
+
 //attach styles and popups to the hex layer
 function highlightHex(e) {
   var layer = e.target;
@@ -258,6 +259,7 @@ function highlightHex(e) {
   }
 }
 
+
 function resetHexHighlight(e) {
   var layer = e.target;
   var hexStyleDefault = style(layer.feature);
@@ -265,22 +267,8 @@ function resetHexHighlight(e) {
 }
 
 function onEachHex(feature, layer) {
-  layer.on({
-    mouseover: highlightHex,
-    mouseout: resetHexHighlight
-  });
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
-  //for the sake of grammar
-  if (feature.properties.pt_count == 1) {
-    var be_verb = "There is";
-    var point_s = "point";
-  } else {
-    var be_verb = "There are";
-    var point_s = "points";
-  }
-  layer.bindPopup(be_verb + ' <b>' + feature.properties.pt_count + '</b> ' + point_s + ' in this cell.');
-
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
