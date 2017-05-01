@@ -28,12 +28,28 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(map);
 
 
-L.Routing.control({
+control = L.Routing.control({
   waypoints: [
     L.latLng(centerlat, centerlon),
     L.latLng(centerlat-0.05, centerlon+0.05)
-  ]
-}).addTo(map);
+  ],
+  routeWhileDragging: true
+});
+control.addTo(map);
+
+function createButton(label, container) {
+    var btn = L.DomUtil.create('button', '', container);
+    btn.setAttribute('type', 'button');
+    btn.innerHTML = label;
+    return btn;
+}
+
+map.on('click', function(e) {
+    control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+    map.closePopup();
+});
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
