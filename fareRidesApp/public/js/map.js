@@ -27,6 +27,15 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 }).addTo(map);
 
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(centerlat, centerlon),
+    L.latLng(centerlat-0.05, centerlon+0.05)
+  ]
+}).addTo(map);
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 //generating the GeoJSON objects//
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,6 +107,8 @@ for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
 }
 
 L.geoJson(hexgrid, {onEachFeature: onEachHex}).addTo(map);
+
+
 
 function getRandomCoordinates(radius, uniform) {
   // Generate two random numbers1
