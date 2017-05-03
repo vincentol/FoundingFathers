@@ -1,4 +1,5 @@
 Vincent: 
+Added Sandwich menu with slide in options that go over the map
 
 Ruoqi: Added pedestrian guidance. Wrote markdown file.
 
