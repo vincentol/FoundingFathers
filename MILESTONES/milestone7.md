@@ -5,7 +5,7 @@ Ruoqi: Added pedestrian guidance. Wrote markdown file.
 
 Sean: 
 
-Robert: 
+Robert: Changed overlay so that routing would work on top of hex grid. Set up default leaflet routing machine and waypoint logic.
 
 Screenshot:
 ![Screenshot of core map functionality:](http://i.imgur.com/GMECMgO.png)
