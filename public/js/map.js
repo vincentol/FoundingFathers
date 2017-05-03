@@ -40,7 +40,8 @@ control = L.Routing.control({
   router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
   formatter: new L.Routing.mapzenFormatter(),
   summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</div>',
-  routeWhileDragging: false
+  routeWhileDragging: false,
+  fitSelectedRoutes: false
   //routeWhileDragging: true
 
 });
