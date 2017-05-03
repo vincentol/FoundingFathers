@@ -9,8 +9,7 @@ var centerlon = -117.241435;
 // set default zoom level
 var zoomLevel = 15;
 
-// initialize map
-var map = L.map('map').setView([centerlat, centerlon], zoomLevel);
+
 
 // set source for map tiles
 ATTR = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -20,20 +19,30 @@ ATTR = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors
 CDB_URL = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 
 // add tiles to map
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
-}).addTo(map);
+// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//     maxZoom: 18,
+//     id: 'mapbox.streets',
+//     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+// }).addTo(map);
 
+//Mapzen API Key
+L.Mapzen.apiKey = "mapzen-2DryXS8";
+// initialize map
+var map = L.Mapzen.map('map');
+map.setView([centerlat, centerlon], 15);
 
 control = L.Routing.control({
   waypoints: [
     L.latLng(centerlat, centerlon),
-    L.latLng(centerlat-0.05, centerlon+0.05)
+    L.latLng(centerlat-0.005, centerlon+0.009)
   ],
-  routeWhileDragging: true
+  router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
+  formatter: new L.Routing.mapzenFormatter(),
+  summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</div>',
+  routeWhileDragging: false
+  //routeWhileDragging: true
+
 });
 control.addTo(map);
 
@@ -245,7 +254,7 @@ function style(feature) {
     color: "#888",
     weight: 0.5,
     opacity: 1,
-    fillOpacity: 0.4//0.8
+    fillOpacity: 0.2//0.8
   };
 }
 
@@ -325,8 +334,8 @@ function make_dots(dotcount) {
   return dots;
 }
 
-window.onload = function showMark() {
-    L.marker([32.878486, -117.241435]).addTo(map)
-        .bindPopup('Current Location')
-        .openPopup();
-}
+// window.onload = function () {
+//     L.marker([32.878486, -117.241435]).addTo(map)
+//         .bindPopup('Current Location')
+//         .openPopup();
+// }
