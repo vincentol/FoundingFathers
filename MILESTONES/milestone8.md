@@ -1,8 +1,8 @@
 # Milestone 8
 
 ## Vincent Lim:
-![alt text](http://imgur.com/kPdrivV)
-![alt text](http://imgur.com/kPdrivV)
+![alt text](http://imgur.com/kPdrivV.jpg)
+![alt text](http://imgur.com/kPdrivV.jpg)
 
 This paper prototype adds a sharing feature by utilizing already
 existing social networking apps. This would allow friends to share
@@ -16,10 +16,10 @@ meet up for the cheapest uber and send that location to each other with
 a few taps from their fingers (or clicks on a laptop).
 
 Ruoqi:
-![alt text](http://imgur.com/JWTMqat)
+![alt text](http://imgur.com/JWTMqat.jpg)
 
 
 Sean:
-![alt text](http://imgur.com/q1GGbj2)
+![alt text](http://imgur.com/q1GGbj2.jpg)
 Robert:
-![alt text](http://imgur.com/cMr69t7t)
+![alt text](http://imgur.com/cMr69t7t.jpg)
