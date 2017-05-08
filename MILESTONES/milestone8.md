@@ -1,6 +1,7 @@
 # Milestone 8
 
 ## Vincent Lim:
+
 ![alt text](http://imgur.com/kPdrivV.jpg)
 ![alt text](http://imgur.com/kPdrivV.jpg)
 
@@ -16,16 +17,20 @@ meet up for the cheapest uber and send that location to each other with
 a few taps from their fingers (or clicks on a laptop).
 
 Ruoqi:
+
 ![alt text](http://imgur.com/JWTMqat.jpg)
 
 
 Sean:
+
 ![alt text](http://imgur.com/q1GGbj2.jpg)
+
 This prototype depicts the suggestion panel and help button.
 The suggestion panel lists optimal choices for alternate locations, along with some details for each choice.
 The help button opens a help overlay with general information concerning the app.
 
 Robert:
+
 ![alt text](https://i.imgur.com/I7odRfX.jpg)
 
 This prototype shows the main tooltip elements on the side of the mapo that give the user the information
