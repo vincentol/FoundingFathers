@@ -21,9 +21,9 @@ Ruoqi:
 
 Sean:
 ![alt text](http://imgur.com/q1GGbj2.jpg)
-
-
-
+This prototype depicts the suggestion panel and help button.
+The suggestion panel lists optimal choices for alternate locations, along with some details for each choice.
+The help button opens a help overlay with general information concerning the app.
 
 Robert:
 ![alt text](https://i.imgur.com/I7odRfX.jpg)
