@@ -21,5 +21,14 @@ Ruoqi:
 
 Sean:
 ![alt text](http://imgur.com/q1GGbj2.jpg)
+
+
+
+
 Robert:
-![alt text](http://imgur.com/cMr69t7t.jpg)
+![alt text](https://i.imgur.com/I7odRfX.jpg)
+
+This prototype shows the main tooltip elements on the side of the mapo that give the user the information
+that they need in order to fully understand their choices with the app. It also shows a really basic profile panel 
+that could show users information on their usage of the app. The profile could ultimately show things like money saved
+or popular routes.
