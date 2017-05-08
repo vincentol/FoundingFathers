@@ -16,12 +16,16 @@ they want to meet up to share an uber back home. They can find a location to
 meet up for the cheapest uber and send that location to each other with
 a few taps from their fingers (or clicks on a laptop).
 
-Ruoqi:
+## Ruoqi:
 
 ![alt text](http://imgur.com/JWTMqat.jpg)
 
+This prototype shows the user setting page. Users can set the waiting time and walking distance in this part and save it.
+And at the bottom of the page, users can choose Uber or Lyft button to see each surge/prime time. And refresh button the refresh the info.
 
-Sean:
+
+
+## Sean:
 
 ![alt text](http://imgur.com/q1GGbj2.jpg)
 
@@ -29,7 +33,7 @@ This prototype depicts the suggestion panel and help button.
 The suggestion panel lists optimal choices for alternate locations, along with some details for each choice.
 The help button opens a help overlay with general information concerning the app.
 
-Robert:
+## Robert:
 
 ![alt text](https://i.imgur.com/I7odRfX.jpg)
 
