@@ -94,6 +94,7 @@ arr.length = 1000;
 let i = 0;
 while (i < 1000) {
   arr[i] = 0;
+  if (i > 250) arr[i] = Math.floor(Math.random()*800)+1;
   i++;
 }
 
@@ -340,3 +341,7 @@ function make_dots(dotcount) {
 //         .bindPopup('Current Location')
 //         .openPopup();
 // }
+
+submit_preferences = function(dist, time) {
+  map.setZoom(dist*7);
+}

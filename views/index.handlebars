@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>Choropleth Tutorial - Leaflet</title>
+    <title>FareRides</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,18 +36,35 @@
 <body>
 
   <div class = "topbar">
-    <!-- sandwich menu -->
+    <!-- ***************** sandwich menu ******************** -->
     <div id="mymenu" class = "sidemenu">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class = "side-item">How far are you willing to walk?</div>
-      <div class = "side-item">How long are you wiling to wait?</div>
-      <div class = "side-item">(TODO APPLY BUTTON)</div>
+        <form>
+          <div class = "side-item">How far are you willing to walk? 
+          </div>
+          <input type="text" name="walk_dist" value="2">
+          <select>
+            <option value="miles">miles</option>
+            <option value="minutes">minutes</option>
+          </select>
+            <div class = "side-item">How long are you wiling to wait? (minutes)
+            </div>
+          <input type="text" name="wait_time" value="30">
+          <select>
+            <option value="miles">minutes</option>
+            <option value="minutes">hours</option>
+          </select>
+          </br>
+          </br>
+          <input class="btn-primary btn-sm" type="submit" value="Apply Changes">
+        <form>
       <div class = "side-item">--------------------------------</div>
       <div class = "side-item"><a href="#">User Settings</a></div>
     </div>
 
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   </div>
+  <!-- ************** End side bar **************** -->
 
   <center>
     <!--search bar-->
