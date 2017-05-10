@@ -24,10 +24,29 @@ L.Mapzen.apiKey = "mapzen-2DryXS8";
 var map = L.Mapzen.map('map');
 map.setView([centerlat, centerlon], 15);
 
+
+waypoints = [L.latLng(centerlat, centerlon)];
+
+var newIcon = L.Icon.extend({
+      options: {
+          iconSize:     [38, 95],
+          shadowSize:   [50, 64],
+          iconAnchor:   [22, 94],
+          shadowAnchor: [4, 62],
+          popupAnchor:  [-3, -76]
+      }
+    });
+
+
 control = L.Routing.control({
-  waypoints: [
-    L.latLng(centerlat, centerlon)
-  ],
+  plan: L.Routing.plan(waypoints, {
+      createMarker: function(i, wp) {
+        return L.marker(wp.latLng, {
+          draggable: true,
+          icon: new newIcon({iconUrl: './images/marker.png'})
+        });
+      }
+    }),
   router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
   formatter: new L.Routing.mapzenFormatter(),
   summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</div>',
@@ -292,21 +311,9 @@ arr[352] = 000;
 function addMarkers()
 {
 
-    var newIcon = L.Icon.extend({
-      options: {
-          shadowUrl: './images/redThing.png',
-          iconSize:     [38, 95],
-          shadowSize:   [50, 64],
-          iconAnchor:   [22, 94],
-          shadowAnchor: [4, 62],
-          popupAnchor:  [-3, -76]
-      }
-    });
-
     var redIcon = new newIcon({iconUrl: './images/redThing.png'});
 
-    marker1 = L.marker([32.882, -117.236],
-      {icon: redIcon})
+    marker1 = L.marker([32.882, -117.236])
       .bindTooltip("Suggested location",
           {
             permanent: true,
@@ -314,8 +321,7 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.879, -117.246],
-    {icon: redIcon})
+    marker2 = L.marker([32.879, -117.246])
       .bindTooltip("Suggested location",
           {
             permanent: true,
@@ -323,8 +329,7 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker3 = L.marker([32.873, -117.244],
-      {icon: redIcon})
+    marker3 = L.marker([32.873, -117.244])
       .bindTooltip("Suggested location",
           {
             permanent: true,
