@@ -1,4 +1,5 @@
 Vincent: 
+Implemented the preference settings, both front and back end
 
 Ruoqi: Improved UI by removing redundant elements. Wrote markdown file.
 
