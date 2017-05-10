@@ -381,7 +381,7 @@ function setPrefs() {
   var x = document.getElementById("pref_form");
   var dist = (x.elements[0].value);
   console.log(dist);
-  map.setZoom((28-dist)/2);
+  map.setZoom((32-dist)/2);
   closeNav();
   return false;
 }
