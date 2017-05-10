@@ -342,6 +342,13 @@ function make_dots(dotcount) {
 //         .openPopup();
 // }
 
-submit_preferences = function(dist, time) {
-  map.setZoom(dist*7);
+
+function setPrefs() {
+  var x = document.getElementById("pref_form");
+  var dist = (x.elements[0].value);
+  console.log(dist);
+  map.setZoom((28-dist)/2);
+  closeNav();
+  return false;
 }
+

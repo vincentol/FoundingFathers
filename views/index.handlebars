@@ -39,17 +39,17 @@
     <!-- ***************** sandwich menu ******************** -->
     <div id="mymenu" class = "sidemenu">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <form>
+        <form id="pref_form" action="javascript:setPrefs();">
           <div class = "side-item">How far are you willing to walk? 
           </div>
-          <input type="text" name="walk_dist" value="2">
+          <input type="text" name="walk_dist" value="1" required>
           <select>
             <option value="miles">miles</option>
             <option value="minutes">minutes</option>
           </select>
             <div class = "side-item">How long are you wiling to wait? (minutes)
             </div>
-          <input type="text" name="wait_time" value="30">
+          <input type="text" name="wait_time" value="30" required>
           <select>
             <option value="miles">minutes</option>
             <option value="minutes">hours</option>
