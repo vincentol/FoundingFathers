@@ -210,7 +210,7 @@ hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
     grades = [100, 200, 300, 400, 500, 600, 700],
-    labels = ['<strong>Point Count</strong>'],
+    labels = ['<strong>Surge Percentage</strong>'],
     from, to;
 
   //iterate through grades and create a color field and label for each

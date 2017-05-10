@@ -9,3 +9,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("mymenu").style.width = "0";
 }
+
+function refreshButton() {
+  location.reload(true);
+}
+
