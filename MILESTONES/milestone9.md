@@ -1,0 +1,13 @@
+Vincent: 
+
+Ruoqi: Improved UI by removing redundant elements. Wrote markdown file.
+
+Sean: 
+
+Robert: 
+
+Screenshot:
+![Screenshot of core map functionality:](http://i.imgur.com/aSjlUlp.png)
+![Screenshot of menu:](http://i.imgur.com/nmy6hZ0.png)
+
+Since last week we added pedestrian guidance using leaflet-routing-machine and a menu for preference setting. This week, we connected to our final data source and added some 'suggested location' near the current loction. Also, we improved user setting page.
