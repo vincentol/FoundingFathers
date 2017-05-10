@@ -291,7 +291,22 @@ arr[352] = 000;
 
 function addMarkers()
 {
-    marker1 = L.marker([32.882, -117.236])
+
+    var newIcon = L.Icon.extend({
+      options: {
+          shadowUrl: './images/redThing.png',
+          iconSize:     [38, 95],
+          shadowSize:   [50, 64],
+          iconAnchor:   [22, 94],
+          shadowAnchor: [4, 62],
+          popupAnchor:  [-3, -76]
+      }
+    });
+
+    var redIcon = new newIcon({iconUrl: './images/redThing.png'});
+
+    marker1 = L.marker([32.882, -117.236],
+      {icon: redIcon})
       .bindTooltip("Suggested location",
           {
             permanent: true,
@@ -299,7 +314,8 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.879, -117.246])
+    marker2 = L.marker([32.879, -117.246],
+    {icon: redIcon})
       .bindTooltip("Suggested location",
           {
             permanent: true,
@@ -307,7 +323,8 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker3 = L.marker([32.873, -117.244])
+    marker3 = L.marker([32.873, -117.244],
+      {icon: redIcon})
       .bindTooltip("Suggested location",
           {
             permanent: true,
