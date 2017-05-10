@@ -11,6 +11,6 @@ function closeNav() {
 }
 
 function refreshButton() {
-  document.getElementById("mymenu").style.width = "100%";
+  location.reload(true);
 }
 
