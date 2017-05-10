@@ -34,8 +34,7 @@ map.setView([centerlat, centerlon], 15);
 
 control = L.Routing.control({
   waypoints: [
-    L.latLng(centerlat, centerlon),
-    L.latLng(centerlat-0.005, centerlon+0.009)
+    L.latLng(centerlat, centerlon)
   ],
   router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
   formatter: new L.Routing.mapzenFormatter(),
@@ -47,6 +46,30 @@ control = L.Routing.control({
 });
 control.addTo(map);
 
+marker1 = L.marker([32.882, -117.236])
+          .bindTooltip("Suggested location",
+              {
+                permanent: true,
+                direction: 'right'
+              }
+  ).addTo(map);
+
+marker2 = L.marker([32.879, -117.246])
+          .bindTooltip("Suggested location",
+              {
+                permanent: true,
+                direction: 'right'
+              }
+  ).addTo(map);
+
+marker3 = L.marker([32.873, -117.244])
+          .bindTooltip("Suggested location",
+              {
+                permanent: true,
+                direction: 'right'
+              }
+  ).addTo(map);
+
 function createButton(label, container) {
     var btn = L.DomUtil.create('button', '', container);
     btn.setAttribute('type', 'button');
@@ -54,12 +77,23 @@ function createButton(label, container) {
     return btn;
 }
 
+marker1.on('click', function(e){
+    control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+});
+
+marker2.on('click', function(e){
+    control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+});
+
+marker3.on('click', function(e){
+    control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+});
+
+
 map.on('click', function(e) {
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
     map.closePopup();
 });
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,16 +133,16 @@ while (i < 1000) {
 }
 
 //center
-arr[299] = 700;
+arr[299] = 500;
 
 //1 away
-arr[272] = 500;
+arr[272] = 400;
 arr[273] = 300;
 
-arr[298] = 500;
+arr[298] = 400;
 arr[300] = 300;
 
-arr[324] = 700;
+arr[324] = 500;
 arr[325] = 200;
 
 //2 away
@@ -203,13 +237,13 @@ function getRandomLocation(latitude, longitude, radiusInMeters) {
 
 //create legend
 var hexlegend = L.control({
-  position: 'topright'
+  position: 'bottomleft'
 });
 //generate legend contents
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [100, 200, 300, 400, 500, 600, 700],
+    grades = [100, 200, 300, 400, 500],
     labels = ['<strong>Surge Percentage</strong>'],
     from, to;
 
