@@ -5,7 +5,7 @@ Ruoqi: Improved UI by removing redundant elements. Wrote markdown file.
 
 Sean: 
 
-Robert: 
+Robert: Added suggestions and improved waypoint functionality. Moved data to priceData.json
 
 Screenshot:
 ![Screenshot of core map functionality:](http://i.imgur.com/aSjlUlp.png)

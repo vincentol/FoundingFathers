@@ -18,14 +18,6 @@ ATTR = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors
 
 CDB_URL = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 
-// add tiles to map
-// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-//     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-//     maxZoom: 18,
-//     id: 'mapbox.streets',
-//     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
-// }).addTo(map);
-
 //Mapzen API Key
 L.Mapzen.apiKey = "mapzen-2DryXS8";
 // initialize map
@@ -46,29 +38,7 @@ control = L.Routing.control({
 });
 control.addTo(map);
 
-marker1 = L.marker([32.882, -117.236])
-          .bindTooltip("Suggested location",
-              {
-                permanent: true,
-                direction: 'right'
-              }
-  ).addTo(map);
-
-marker2 = L.marker([32.879, -117.246])
-          .bindTooltip("Suggested location",
-              {
-                permanent: true,
-                direction: 'right'
-              }
-  ).addTo(map);
-
-marker3 = L.marker([32.873, -117.244])
-          .bindTooltip("Suggested location",
-              {
-                permanent: true,
-                direction: 'right'
-              }
-  ).addTo(map);
+addMarkers();
 
 function createButton(label, container) {
     var btn = L.DomUtil.create('button', '', container);
@@ -112,63 +82,6 @@ var units = 'miles';
 
 //create hex grid and count points within each cell
 var hexgrid = turf.hexGrid(bbox, cellWidth, units);
-//var hexcounts = turf.count(hexgrid, dots, 'pt_count');
-//L.geoJson(hexcounts, {
-//  onEachFeature: onEachHex
-//}).addTo(map);
-
-//var map = L.map('map').setView([centerlat, centerlon], zoomLevel);
-
-//var map = L.mapbox.map('map', 'morganherlocker.kgidd73k')
-//    .setView([35.463453, -102.508014], 4)
-//    .featureLayer.setGeoJSON(hexgrid);
-
-arr = [];
-arr.length = 1000;
-let i = 0;
-while (i < 1000) {
-  arr[i] = 0;
-  if (i > 250) arr[i] = Math.floor(Math.random()*800)+1;
-  i++;
-}
-
-//center
-arr[299] = 500;
-
-//1 away
-arr[272] = 400;
-arr[273] = 300;
-
-arr[298] = 400;
-arr[300] = 300;
-
-arr[324] = 500;
-arr[325] = 200;
-
-//2 away
-arr[246] = 000;
-arr[247] = 000;
-arr[248] = 000;
-
-arr[271] = 100;
-arr[274] = 100;
-
-arr[297] = 100;
-arr[301] = 000;
-
-arr[323] = 200;
-arr[326] = 100;
-
-arr[350] = 400;
-arr[351] = 300;
-arr[352] = 000;
-
-for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
-  hexgrid.features[x].properties['pt_count'] = arr[x];
-}
-
-L.geoJson(hexgrid, {onEachFeature: onEachHex}).addTo(map);
-
 
 
 function getRandomCoordinates(radius, uniform) {
@@ -212,24 +125,6 @@ function getRandomLocation(latitude, longitude, radiusInMeters) {
     longitude: longitude + (offsetLongitude * (180 / Math.PI))
   }
 }
-
-/*function make_dots() {
-  var dots = {
-    type: "FeatureCollection",
-    features: []
-  };
-
-  for (var i = 0; i < dotcount; ++i) {
-    var loc = getRandomLocation(40.767915, -73.972321, 1000);
-
-    var t = L.marker([loc.latitude, loc.longitude]);
-
-    dots.features.push(t.toGeoJSON());
-  }
-
-  return dots;
-}
-*/
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 //legend//
@@ -335,47 +230,14 @@ function make_dots(dotcount) {
   };
 
   for (var i = 0; i < dotcount; ++i) {
-
-    //set up random variables
-    /*x = normish(0, 4);
-    y = normish(0, 4);
-
-    //create points randomly distributed about center coordinates
-    var g = {
-        "type": "Point",
-            "coordinates": [((x * 0.11) + centerlon), ((y * 0.1) + centerlat)]
-    };
-
-    //create feature properties, roughly proportional to distance from center coordinates
-    var p = {
-        "id": i,
-            "popup": "Dot_" + i,
-            "year": parseInt(Math.sqrt(x * x + y * y) * 60 * (1 - Math.random() / 1.5) + 1900),
-            "size": Math.round((parseFloat(Math.abs((normish(y*y, 2) + normish(x*x, 2)) * 50) + 10)) * 100) / 100
-    };*/
-
     var loc = getRandomLocation(40.769996, -73.973007, 5000);
 
     var t = L.marker([loc.latitude, loc.longitude]);
 
     dots.features.push(t.toGeoJSON());
-
-    //create features with proper geojson structure        
-    //dots.features.push({
-    //    "geometry" : g,
-    //    "type": "Feature",
-    //    "properties": p
-    //});
   }
   return dots;
 }
-
-// window.onload = function () {
-//     L.marker([32.878486, -117.241435]).addTo(map)
-//         .bindPopup('Current Location')
-//         .openPopup();
-// }
-
 
 function setPrefs() {
   var x = document.getElementById("pref_form");
@@ -386,3 +248,70 @@ function setPrefs() {
   return false;
 }
 
+function loadPrices(){
+/*
+//center
+arr[299] = 500;
+
+//1 away
+arr[272] = 400;
+arr[273] = 300;
+
+arr[298] = 400;
+arr[300] = 300;
+
+arr[324] = 500;
+arr[325] = 200;
+
+//2 away
+arr[246] = 000;
+arr[247] = 000;
+arr[248] = 000;
+
+arr[271] = 100;
+arr[274] = 100;
+
+arr[297] = 100;
+arr[301] = 000;
+
+arr[323] = 200;
+arr[326] = 100;
+
+arr[350] = 400;
+arr[351] = 300;
+arr[352] = 000;
+*/
+
+  for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
+    hexgrid.features[x].properties['pt_count'] = prices[x];
+  }
+
+  L.geoJson(hexgrid, {onEachFeature: onEachHex}).addTo(map);
+}
+
+function addMarkers()
+{
+    marker1 = L.marker([32.882, -117.236])
+      .bindTooltip("Suggested location",
+          {
+            permanent: true,
+            direction: 'right'
+          }
+    ).addTo(map);
+
+    marker2 = L.marker([32.879, -117.246])
+      .bindTooltip("Suggested location",
+          {
+            permanent: true,
+            direction: 'right'
+          }
+    ).addTo(map);
+
+    marker3 = L.marker([32.873, -117.244])
+      .bindTooltip("Suggested location",
+          {
+            permanent: true,
+            direction: 'right'
+          }
+    ).addTo(map);
+}
