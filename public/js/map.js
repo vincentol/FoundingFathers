@@ -157,9 +157,9 @@ var hexlegend = L.control({
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [1, 1.3, 1.5, 1.7, 2],
+    grades = [1, 1.2, 1.4, 1.6, 1.8, 2],
     labels = ['<strong>Surge Percentage</strong>'],
-    colorval = [100, 200, 300, 400, 500],
+    colorval = [100, 200, 300, 400, 500, 600],
     from, to;
 
   //iterate through grades and create a color field and label for each
@@ -190,13 +190,13 @@ var hexStyleHighlight = {
 function getColor(y) {
   return y == undefined ? '#888' :
     y < 100 ? '#FFFFFF':
-    y < 200 ? '#FFFFFF' :
-    y < 300 ? '#FFFE11' :
-    y < 400 ? '#E8C115' :
-    y < 500 ? '#FFA100' :
-    y < 600 ? '#E8610C' :
-    y < 700 ? '#FF2000' :
-    '#0c2c84';
+    y < 200 ? '#FEFEFE' :
+    y < 300 ? '#AAAAAA' :
+    y < 400 ? '#FFFB12' :
+    y < 500 ? '#E8C115' :
+    y < 600 ? '#FFA100' :
+    y < 700 ? '#E8610C' :
+    '#FF2000';
 }
 
 //create style, with fillColor picked from color ramp
