@@ -1,13 +1,17 @@
 .topbar {
   background-color: lightblue;
+  height: 40px;
+  z-index: 999999;
 }
 
 .mymap{
   margin-top: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
 }
-.refresh{
-    margin-top: 20px;
-}
+
 .myform{
     margin-top: 20px;
 }
@@ -93,6 +97,15 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidemenu {padding-top: 15px;}
+  .sidemenu a {font-size: 18px;}
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  padding: 0px;
 }
