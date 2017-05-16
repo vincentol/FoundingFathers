@@ -5,7 +5,7 @@
 }
 
 .mymap{
-  margin-top: 40px;
+  margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
@@ -103,9 +103,9 @@
 
 .container {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 40px;
+  left: 0px;
+  right: 0px;
   bottom: 40px;
   padding: 0px;
 }

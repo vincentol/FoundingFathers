@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
           integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
           crossorigin=""/>
@@ -15,38 +16,39 @@
 
     <link rel="stylesheet" href="css/leaflet-routing-machine.css" />
 
-    <script src="js/leaflet.js"></script>
 
     <link rel="stylesheet" href="https://mapzen.com/js/mapzen.css">
     <link rel="stylesheet" href="https://unpkg.com/lrm-mapzen@1.1.7/dist/lrm-mapzen.css">
-    <script src="https://mapzen.com/js/mapzen.min.js"></script>
     <link rel="stylesheet" href="css/leaflet.routing.mapzen.css">
     
 
+    <script src="js/leaflet.js"></script>
     <script src="js/cogs121.js"></script>
     <script src="https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js"></script>
-
+    <script src="https://mapzen.com/js/mapzen.min.js"></script>
     <script src="js/leaflet-routing-machine.js"></script>
     <script src="js/lrm-mapzen.js"></script>
     <script src="js/price.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
     <!-- ***************** sandwich menu ******************** -->
     <div id="mymenu" class = "sidemenu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closemyNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <form id="pref_form" action="javascript:setPrefs();">
           <div class = "side-item">How far are you willing to walk? 
           </div>
           <input type="text" name="walk_dist" value="1" required>
-          <select>
+          <select name="travel" id="travel">
             <option value="miles">miles</option>
             <option value="minutes">minutes</option>
           </select>
             <div class = "side-item">How long are you wiling to wait? (minutes)
             </div>
           <input type="text" name="wait_time" value="30" required>
-          <select>
+          <select name="wait" id="wait">
             <option value="miles">minutes</option>
             <option value="minutes">hours</option>
           </select>
@@ -59,8 +61,7 @@
     </div>
 
     <div class = "topbar">
-      <span style="font-size:30px;cursor:pointer" onclick="openmyNav()">&#9776;</span>
-      <button onclick="openmyNav()">test</button>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
 
   <!-- ************** End side bar **************** -->

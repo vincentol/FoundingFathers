@@ -2,11 +2,11 @@
  * Created by LRQ on 2017/4/23.
  */
 
-function openmyNav() {
+function openNav() {
   document.getElementById("mymenu").style.width = "100%";
 }
 
-function closemyNav() {
+function closeNav() {
   document.getElementById("mymenu").style.width = "0";
 }
 
