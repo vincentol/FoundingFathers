@@ -138,16 +138,18 @@ var hexlegend = L.control({
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [100, 200, 300, 400, 500],
+    grades = [1, 1.3, 1.5, 1.7, 2],
     labels = ['<strong>Surge Percentage</strong>'],
+    colorval = [100, 200, 300, 400, 500],
     from, to;
 
   //iterate through grades and create a color field and label for each
   for (var i = 0; i < grades.length; i++) {
     from = grades[i];
     to = grades[i + 1];
+    colorin = colorval[i];
     labels.push(
-      '<i style="background:' + getColor(from + 0.5) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
+      '<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? '&ndash;' + to : '+'));
   }
   div.innerHTML = labels.join('<br>');
   return div;
@@ -168,13 +170,13 @@ var hexStyleHighlight = {
 //create color ramp
 function getColor(y) {
   return y == undefined ? '#888' :
-    y < 100 ? '#ffffe9' :
-    y < 200 ? '#edf8b1' :
-    y < 300 ? '#c7e9b4' :
-    y < 400 ? '#7fcdbb' :
-    y < 500 ? '#41b6c4' :
-    y < 600 ? '#1d91c0' :
-    y < 700 ? '#225ea8' :
+    y < 100 ? '#FFFFFF':
+    y < 200 ? '#FFFFFF' :
+    y < 300 ? '#FFFE11' :
+    y < 400 ? '#E8C115' :
+    y < 500 ? '#FFA100' :
+    y < 600 ? '#E8610C' :
+    y < 700 ? '#FF2000' :
     '#0c2c84';
 }
 
