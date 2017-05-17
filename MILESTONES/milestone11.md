@@ -10,7 +10,7 @@ Sean:
 
 Robert: 
  - Changed menu views and preference settings so distance choices effected map view. 
-  - Potential profile UI bit that we probably don't wait too.
+  - Potential profile UI bit that we probably don't wait too. Going to want to change this to another side-bar.
 
 Screenshot:
 ![Screenshot of core map functionality:](http://i.imgur.com/CFACYKV.png)
