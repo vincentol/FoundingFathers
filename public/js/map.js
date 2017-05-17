@@ -38,6 +38,8 @@ var newIcon = L.Icon.extend({
     });
 
 
+
+
 control = L.Routing.control({
   plan: L.Routing.plan(waypoints, {
       createMarker: function(i, wp) {
@@ -319,7 +321,7 @@ function addMarkers()
       .bindTooltip("Suggested location",
           {
             permanent: true,
-            direction: 'right'
+            direction: 'top'
           }
     ).addTo(map);
 
@@ -327,7 +329,7 @@ function addMarkers()
       .bindTooltip("Suggested location",
           {
             permanent: true,
-            direction: 'right'
+            direction: 'top'
           }
     ).addTo(map);
 
@@ -335,7 +337,7 @@ function addMarkers()
       .bindTooltip("Suggested location",
           {
             permanent: true,
-            direction: 'right'
+            direction: 'top'
           }
     ).addTo(map);
 }
