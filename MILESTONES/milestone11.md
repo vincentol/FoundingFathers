@@ -1,5 +1,7 @@
 Vincent: 
-
+- Changed color scheme to make it more intuitive (based on feedback from other groups)
+- Made the app mobile focused (now sized to fit mobile screens)
+- Took out unneeded buttons
 
 Ruoqi: 
 Added new icon for current location. Wrote markdown file for this milestone.
