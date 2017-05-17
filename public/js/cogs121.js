@@ -3,7 +3,7 @@
  */
 
 function openNav() {
-  document.getElementById("mymenu").style.width = "100%";
+  document.getElementById("mymenu").style.width = "250px";
 }
 
 function closeNav() {
