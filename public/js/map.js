@@ -80,7 +80,6 @@ marker3.on('click', function(e){
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
 });
 
-
 map.on('click', function(e) {
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
     map.closePopup();
@@ -266,7 +265,7 @@ function setPrefs() {
   var x = document.getElementById("pref_form");
   var dist = (x.elements[0].value);
   console.log(dist);
-  map.setZoom((32-dist)/2);
+  map.setZoom((18-dist));
   closeNav();
   return false;
 }
@@ -314,8 +313,6 @@ arr[352] = 000;
 
 function addMarkers()
 {
-
-    var redIcon = new newIcon({iconUrl: './images/redThing.png'});
 
     marker1 = L.marker([32.882, -117.236])
       .bindTooltip("Suggested location",
