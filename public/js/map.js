@@ -322,7 +322,7 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.878916, -117.245510])
+    marker2 = L.marker([32.879473, -117.245014])
       .bindTooltip("Suggestion B",
           {
             permanent: true,
