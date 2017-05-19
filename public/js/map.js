@@ -314,24 +314,24 @@ arr[352] = 000;
 function addMarkers()
 {
 
-    marker1 = L.marker([32.882, -117.236])
-      .bindTooltip("Suggested location",
+    marker1 = L.marker([32.875829, -117.239889])
+      .bindTooltip("Suggestion A",
           {
             permanent: true,
             direction: 'top'
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.879, -117.246])
-      .bindTooltip("Suggested location",
+    marker2 = L.marker([32.878916, -117.245510])
+      .bindTooltip("Suggestion B",
           {
             permanent: true,
             direction: 'top'
           }
     ).addTo(map);
 
-    marker3 = L.marker([32.873, -117.244])
-      .bindTooltip("Suggested location",
+    marker3 = L.marker([32.875862, -117.246413])
+      .bindTooltip("Suggestion C",
           {
             permanent: true,
             direction: 'top'
