@@ -3,7 +3,7 @@ Implemented the preference settings, both front and back end
 
 Ruoqi: Improved UI by removing redundant elements. Wrote markdown file.
 
-Sean: Added "Refresh" button and associated functionality with forced reload from server (vs cache).
+Sean: Added "Refresh" button and associated functionality with forced reload from server (vs cache). Clarified labelling in accordance with feedback.
 
 Robert: Added suggestions and improved waypoint functionality. Moved data to priceData.json
 
