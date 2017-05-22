@@ -10,6 +10,8 @@ while (i < 1000):
 		arr[i] = math.floor(random.random()*800)+1
 	i+=1
 
+#hard coded values to wizard of oz UCSD area
+
 #apparently json.dumps doesnt work so i just did this stuff manually
 outFileName = 'priceData.json'
 with open(outFileName, 'w') as outFile:
