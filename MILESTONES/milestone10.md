@@ -6,7 +6,8 @@ How is it done today, and what are the limits of the current practice?
 
     Currently the only way for people to think about their Uber prices are to guess. 
     If someone is in a populated area where a lot of people are calling Ubers then the 
-    best that they could do is guess how far they can walk away to lessen the prices or way some period of time.
+    best that they could do is guess how far they can walk away to lessen the prices or wait
+    some period of time.
     
 What's new in your approach and why do you think it will be successful?
 
