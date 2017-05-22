@@ -11,11 +11,13 @@ How is it done today, and what are the limits of the current practice?
     
 What's new in your approach and why do you think it will be successful?
 
-    Our site is new because it is a way for users to visualize the Uber surge pricing in areas around them so that they
-    can makes informed decisions on where and when they want to call a ride. This will be successful because previously
+    Our site is new because it is a way for users to visualize the Uber surge pricing in 
+    areas around them so that they can makes informed decisions on where and when 
+    they want to call a ride. This will be successful because previously
     this kind of data wasn't available to the average consumer.
 
 Who cares? if you're successful, what difference will it make?
 
-    If we are successful the average user will experience a significant cost reduction in the prices of their rides since
-    they will have the information they need to make informed decisions about their Ubers. 
+    If we are successful the average user will experience a significant cost reduction 
+    in the prices of their rides sincethey will have the information they need to make 
+    informed decisions about their Ubers. 
