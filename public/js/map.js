@@ -9,6 +9,7 @@ var centerlon = -117.241435;
 // set default zoom level
 var zoomLevel = 15;
 
+var currentPoint = 604;
 
 
 // set source for map tiles
@@ -44,7 +45,7 @@ control = L.Routing.control({
   plan: L.Routing.plan(waypoints, {
       createMarker: function(i, wp) {
         return L.marker(wp.latLng, {
-          draggable: true,
+          draggable: false,
           icon: new newIcon({iconUrl: './images/marker.png'})
         });
       }
@@ -184,7 +185,7 @@ hexlegend.addTo(map);
 var hexStyleHighlight = {
   color: "#336",
   weight: 2,
-  opacity: 1,
+  opacity: .5,
 };
 
 //create color ramp
@@ -196,7 +197,6 @@ function getColor(y) {
     y < 400 ? '#FFFB12' :
     y < 500 ? '#E8C115' :
     y < 600 ? '#FFA100' :
-    y < 700 ? '#E8610C' :
     '#FF2000';
 }
 
@@ -207,7 +207,7 @@ function style(feature) {
     color: "#888",
     weight: 0.5,
     opacity: 1,
-    fillOpacity: 0.2//0.8
+    fillOpacity: 0.5//0.8
   };
 }
 
@@ -228,9 +228,22 @@ function resetHexHighlight(e) {
   layer.setStyle(hexStyleDefault);
 }
 
+function calculateSave(i) {
+  if (i < 100) return 25;
+  if (i < 200) return 25;
+  if (i < 300) return 20;
+  if (i < 400) return 15;
+  if (i < 500) return 10;
+  if (i < 600) return 5;
+  else return 0;
+}
+
 function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
+  layer.on('click', function(e) {
+    console.log("Uber from here saves you %f cents for every dollar spent!", calculateSave(feature.properties.pt_count));
+  });
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -306,6 +319,9 @@ arr[352] = 000;
 
   for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
     hexgrid.features[x].properties['pt_count'] = prices[x];
+    /*https://github.com/GIScience/osmatrix-client/blob/master/js/osmatrix.js
+     * Example of getting feature based on coordinates
+    */
   }
 
   L.geoJson(hexgrid, {onEachFeature: onEachHex}).addTo(map);
