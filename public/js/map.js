@@ -159,16 +159,17 @@ var hexlegend = L.control({
 hexlegend.onAdd = function(map) {
   //set up legend grades and labels
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [1, 2, 3, 4, 5, 6],
-    labels = ['<strong>Surge Percentage</strong>'],
+    grades = [1, 2, 3, 4, 5],
+    labels = ['<strong>Surge Multiplier</strong>'],
     colorval = [100, 200, 300, 400, 500, 600],
     from, to;
 
   //iterate through grades and create a color field and label for each
+  labels.push('<i style="background:' + colorval[0] + '"></i> ' + 1);
   for (var i = 0; i < grades.length; i++) {
     from = grades[i];
     to = grades[i + 1];
-    colorin = colorval[i];
+    colorin = colorval[i+1];
     labels.push(
       '<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? ' &ndash; ' + to : '+'));
   }
@@ -207,7 +208,7 @@ function style(feature) {
     color: "#888",
     weight: 0.5,
     opacity: 1,
-    fillOpacity: 0.5//0.8
+    fillOpacity: 0.3//0.8
   };
 }
 
