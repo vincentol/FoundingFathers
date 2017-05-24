@@ -235,7 +235,14 @@ function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
-    console.log("Discount of %f% from this location", calculateSave(feature.properties.pt_count));
+    var discountRatio = calculateSave(feature.properties.pt_count)
+    if(discountRatio > 0){
+      console.log("Selected location is %f% cheaper", discountRatio);
+    } else if(discountRatio < 0){
+      console.log("Selected location is %f% more expensive", -discountRatio);
+    } else if(discountRatio == 0){
+      console.log("Selected location is the same price");
+    }
   });
 }
 
