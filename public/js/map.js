@@ -164,16 +164,12 @@ hexlegend.onAdd = function(map) {
     from, to;
 
   //iterate through grades and create a color field and label for each
-  labels.push('<i style="background:' + colorval[0] + '"></i> ' + 1);
+  labels.push('<i style="background:' + colorval[0] + '"></i> ' + 'None');
   for (var i = 0; i < grades.length; i++) {
-    from = grades[i];
+    from = grades[i]+0.1;
     to = grades[i + 1];
     colorin = colorval[i+1];
-    if (i == 0) {
-      labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + 'None');
-    } else {
-        labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? ' &ndash; ' + to : '+'));
-    }
+    labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? ' &ndash; ' + to : '+'));
   }
   div.innerHTML = labels.join('<br>');
   return div;
