@@ -22,7 +22,7 @@ CDB_URL = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 //Mapzen API Key
 L.Mapzen.apiKey = "mapzen-2DryXS8";
 // initialize map
-var map = L.Mapzen.map('map', {units: "imperial"});
+var map = L.Mapzen.map('map');
 map.setView([centerlat, centerlon], 15);
 
 waypoints = [L.latLng(centerlat, centerlon)];
@@ -169,8 +169,11 @@ hexlegend.onAdd = function(map) {
     from = grades[i];
     to = grades[i + 1];
     colorin = colorval[i+1];
-    labels.push(
-      '<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? ' &ndash; ' + to : '+'));
+    if (var == 0) {
+      labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + 'None');
+    } else {
+        labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? ' &ndash; ' + to : '+'));
+    }
   }
   div.innerHTML = labels.join('<br>');
   return div;
