@@ -228,7 +228,7 @@ function resetHexHighlight(e) {
 }
 
 function calculateSave(i) {
-  return 1-(i+100)/(currentPoint+100) //currentPoint is hardcoded (604)?
+  return int(100*(1-(i+100)/(currentPoint+100))) //currentPoint is hardcoded (604)?
 }
 
 function onEachHex(feature, layer) {
