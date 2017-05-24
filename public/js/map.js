@@ -330,24 +330,25 @@ arr[352] = 000;
 function addMarkers()
 {
 
-    marker1 = L.marker([32.875829, -117.239889])
-      .bindTooltip("Suggestion A",
+    marker1 = L.marker([32.873, -117.238])
+      .bindTooltip("81% Cheaper <br> 7min walk",
+          {
+            permanent: true,
+            direction: 'top',
+            icon: new newIcon({iconUrl: './images/marker.png'})
+          }
+    ).addTo(map);
+
+    marker2 = L.marker([32.878, -117.248])
+      .bindTooltip("35% Cheaper <br> 11min walk",
           {
             permanent: true,
             direction: 'top'
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.879473, -117.245014])
-      .bindTooltip("Suggestion B",
-          {
-            permanent: true,
-            direction: 'top'
-          }
-    ).addTo(map);
-
-    marker3 = L.marker([32.875862, -117.246413])
-      .bindTooltip("Suggestion C",
+    marker3 = L.marker([32.878, -117.238])
+      .bindTooltip("0.4% Cheaper <br> 1min walk",
           {
             permanent: true,
             direction: 'top'
