@@ -169,7 +169,7 @@ hexlegend.onAdd = function(map) {
     from = grades[i]+0.1;
     to = grades[i + 1];
     colorin = colorval[i+1];
-    labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? 'x &ndash; '+to+'.0x' : '.0x+'));
+    labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? 'x &ndash; '+to+'.0x' : 'x+'));
   }
   div.innerHTML = labels.join('<br>');
   return div;
