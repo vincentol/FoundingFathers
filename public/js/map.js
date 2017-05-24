@@ -22,9 +22,8 @@ CDB_URL = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 //Mapzen API Key
 L.Mapzen.apiKey = "mapzen-2DryXS8";
 // initialize map
-var map = L.Mapzen.map('map');
+var map = L.Mapzen.map('map', {units: "imperial"});
 map.setView([centerlat, centerlon], 15);
-
 
 waypoints = [L.latLng(centerlat, centerlon)];
 
