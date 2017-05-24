@@ -7,7 +7,7 @@ Improved UI and wrote part of milestone file
 Sean: 
 
 Robert: 
-
+Didn't really add much this week.
 
 Screenshot:
 ![Screenshot of core map functionality:](http://i.imgur.com/sxZb5Vu.png)
