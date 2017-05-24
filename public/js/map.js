@@ -169,7 +169,7 @@ hexlegend.onAdd = function(map) {
     from = grades[i]+0.1;
     to = grades[i + 1];
     colorin = colorval[i+1];
-    labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? 'x &ndash; '+to+'x' : 'x+'));
+    labels.push('<i style="background:' + getColor(colorin) + '"></i> ' + from + (to ? 'x &ndash; '+to+'.0x' : '.0x+'));
   }
   div.innerHTML = labels.join('<br>');
   return div;
@@ -228,20 +228,14 @@ function resetHexHighlight(e) {
 }
 
 function calculateSave(i) {
-  if (i < 100) return 25;
-  if (i < 200) return 25;
-  if (i < 300) return 20;
-  if (i < 400) return 15;
-  if (i < 500) return 10;
-  if (i < 600) return 5;
-  else return 0;
+  return 1-(i+100)/(currentPoint+100) //currentPoint is hardcoded (604)?
 }
 
 function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
-    console.log("Uber from here saves you %f cents for every dollar spent!", calculateSave(feature.properties.pt_count));
+    console.log("Discount of %f % from this location", calculateSave(feature.properties.pt_count));
   });
 }
 
