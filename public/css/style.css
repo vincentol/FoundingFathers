@@ -1,12 +1,15 @@
 .topbar {
-  background-color: lightblue;
+  background-color: black;
   height: 45px;
   z-index: 99999;
   font-size: 27px;
+  color: white;
 }
 
+
+
 .mymap{
-  margin-top: 0px;
+  margin-top: 6px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
