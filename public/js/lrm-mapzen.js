@@ -571,8 +571,7 @@ if (typeof module !== undefined) module.exports = polyline;
   //L.extend(L.Routing, require('./L.Routing.Localization'));
   L.Routing.MapzenFormatter = L.Class.extend({
     options: {
-      //units: 'metric',
-      units: 'imperial',
+      units: 'metric',
       unitNames: {
         meters: 'm',
         kilometers: 'km',
@@ -595,7 +594,7 @@ if (typeof module !== undefined) module.exports = polyline;
       var un = this.options.unitNames,
           v,
         data;
-      if (True){//this.options.units === 'imperial') {
+      if (this.options.units === 'imperial') {
         //valhalla returns distance in km
         d  = d * 1000;
         d = d / 1.609344;
