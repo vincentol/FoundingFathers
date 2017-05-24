@@ -571,7 +571,8 @@ if (typeof module !== undefined) module.exports = polyline;
   //L.extend(L.Routing, require('./L.Routing.Localization'));
   L.Routing.MapzenFormatter = L.Class.extend({
     options: {
-      units: 'metric',
+      //units: 'metric',
+      units: 'imperial',
       unitNames: {
         meters: 'm',
         kilometers: 'km',
