@@ -228,14 +228,14 @@ function resetHexHighlight(e) {
 }
 
 function calculateSave(i) {
-  return int(100*(1-(i+100)/(currentPoint+100))) //currentPoint is hardcoded (604)?
+  return Math.round(100*(1-(i+100)/(currentPoint+100))) //currentPoint is hardcoded (604)?
 }
 
 function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
-    console.log("Discount of %f % from this location", calculateSave(feature.properties.pt_count));
+    console.log("Discount of %f% from this location", calculateSave(feature.properties.pt_count));
   });
 }
 
