@@ -46,7 +46,7 @@ control = L.Routing.control({
         return L.marker(wp.latLng, {
           draggable: false,
           icon: new newIcon({iconUrl: './images/marker.png'})
-        });
+        }).bindTooltip("message");
       }
     }),
   router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
