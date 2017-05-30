@@ -223,11 +223,11 @@ function onEachHex(feature, layer) {
     var toset;
     discountRatio = calculateSave(feature.properties.pt_count);
     if (discountRatio > 0)
-      toset = discountRatio + '% cheaper';
+      toset = 'selected location is ' + discountRatio + '% cheaper';
     else if (discountRatio < 0)
-      toset = -discountRatio + '% more expensive';
+      toset = 'selected location is ' + -discountRatio + '% more expensive';
     else
-      toset = 'Same price';
+      toset = 'selected location is the same price';
     control.remove();
     control = L.Routing.control({
       plan: L.Routing.plan(waypoints, {
