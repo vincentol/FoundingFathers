@@ -220,7 +220,14 @@ function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
+    var toset;
     discountRatio = calculateSave(feature.properties.pt_count);
+    if (discountRatio > 0)
+      toset = discountRatio + '% cheaper';
+    else if (discountRatio < 0)
+      toset = -discountRatio + '% more expensive';
+    else
+      toset = 'Same price';
     control.remove();
     control = L.Routing.control({
       plan: L.Routing.plan(waypoints, {
@@ -233,7 +240,7 @@ function onEachHex(feature, layer) {
       }),
       router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
       formatter: new L.Routing.mapzenFormatter(),
-      summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</br>' + discountRatio + '% cheaper</div>',
+      summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</br>' + toset,
       routeWhileDragging: false,
       fitSelectedRoutes: false
         //routeWhileDragging: true
