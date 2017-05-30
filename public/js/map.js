@@ -10,6 +10,8 @@ var centerlon = -117.241435;
 var zoomLevel = 15;
 
 var currentPoint = 604;
+var discountRatio;
+var control;
 
 
 // set source for map tiles
@@ -40,24 +42,6 @@ var newIcon = L.Icon.extend({
 
 
 
-control = L.Routing.control({
-  plan: L.Routing.plan(waypoints, {
-      createMarker: function(i, wp) {
-        return L.marker(wp.latLng, {
-          draggable: false,
-          icon: new newIcon({iconUrl: './images/marker.png'})
-        });
-      }
-    }),
-  router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
-  formatter: new L.Routing.mapzenFormatter(),
-  summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</div>',
-  routeWhileDragging: false,
-  fitSelectedRoutes: false
-  //routeWhileDragging: true
-
-});
-control.addTo(map);
 
 addMarkers();
 
@@ -68,6 +52,7 @@ function createButton(label, container) {
     return btn;
 }
 
+/*
 marker1.on('click', function(e){
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
 });
@@ -79,7 +64,7 @@ marker2.on('click', function(e){
 marker3.on('click', function(e){
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
 });
-
+*/
 map.on('click', function(e) {
     control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
     map.closePopup();
@@ -235,7 +220,26 @@ function onEachHex(feature, layer) {
   var hexStyleDefault = style(layer.feature);
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
-    var discountRatio = calculateSave(feature.properties.pt_count)
+    discountRatio = calculateSave(feature.properties.pt_count);
+    control.remove();
+    control = L.Routing.control({
+      plan: L.Routing.plan(waypoints, {
+        createMarker: function(i, wp) {
+          return L.marker(wp.latLng, {
+            draggable: false,
+            icon: new newIcon({iconUrl: './images/marker.png'})
+          });
+        }
+      }),
+      router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
+      formatter: new L.Routing.mapzenFormatter(),
+      summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</br>' + discountRatio + '% cheaper</div>',
+      routeWhileDragging: false,
+      fitSelectedRoutes: false
+        //routeWhileDragging: true
+
+    });
+    control.addTo(map);
     if(discountRatio > 0){
       console.log("Selected location is %f% cheaper", discountRatio);
     } else if(discountRatio < 0){
@@ -329,13 +333,11 @@ arr[352] = 000;
 
 function addMarkers()
 {
-
     marker1 = L.marker([32.873, -117.238])
       .bindTooltip("81% Cheaper <br> 7min walk",
           {
             permanent: true,
             direction: 'top',
-            icon: new newIcon({iconUrl: './images/marker.png'})
           }
     ).addTo(map);
 
@@ -347,11 +349,25 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker3 = L.marker([32.878, -117.238])
-      .bindTooltip("0.4% Cheaper <br> 1min walk",
-          {
-            permanent: true,
-            direction: 'top'
-          }
-    ).addTo(map);
+}
+
+if (typeof(control) == "undefined") {
+  control = L.Routing.control({
+    plan: L.Routing.plan(waypoints, {
+      createMarker: function(i, wp) {
+        return L.marker(wp.latLng, {
+          draggable: false,
+          icon: new newIcon({iconUrl: './images/marker.png'})
+        });
+      }
+    }),
+    router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
+    formatter: new L.Routing.mapzenFormatter(),
+    summaryTemplate:'<div class="start">{name}</div><div class="info {costing}">{distance}, {time}</br>' + discountRatio + '% cheaper</div>',
+    routeWhileDragging: false,
+    fitSelectedRoutes: false
+      //routeWhileDragging: true
+
+  });
+  control.addTo(map);
 }
