@@ -1,12 +1,14 @@
 Vincent: (Edited routing detail box to display relative pricing information to the end user.)
 
-Ruoqi:
+Ruoqi: Adjusted the locations of markers to the bound of surge zones. Added screenshots to milestone file.
 
 Sean: Started milestone file & description. Attemped various means to convert routing distance to imperial units; failed, undid changes. Attempted various means to display relative pricing information alongside user-defined waypoints; results unsatisfactory, undid changes. Attempted single means to resize settings input boxes relative to screen width, successful.
 
 Robert: 
 
 Screenshot:
+[Screenshot of core map functionality:](http://i.imgur.com/GpNob05.png)
+[Screenshot of menu:](http://i.imgur.com/K8oUAa2.png)
 
 Description: (brief description of completed features)
 

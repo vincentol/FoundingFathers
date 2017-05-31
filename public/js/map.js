@@ -340,7 +340,7 @@ arr[352] = 000;
 
 function addMarkers()
 {
-    marker1 = L.marker([32.873, -117.238])
+    marker1 = L.marker([32.876, -117.238])
       .bindTooltip("81% Cheaper <br> 7min walk",
           {
             permanent: true,
@@ -348,7 +348,7 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.878, -117.248])
+    marker2 = L.marker([32.878, -117.2457])
       .bindTooltip("35% Cheaper <br> 11min walk",
           {
             permanent: true,
