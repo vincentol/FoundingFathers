@@ -13,4 +13,3 @@ function closeNav() {
 function refreshButton() {
   location.reload(true);
 }
-

@@ -202,7 +202,6 @@ function highlightHex(e) {
   }
 }
 
-
 function resetHexHighlight(e) {
   var layer = e.target;
   var hexStyleDefault = style(layer.feature);
@@ -235,6 +234,9 @@ function onEachHex(feature, layer) {
       toset = 'selected location is the same price';
       waypointInfo = 'No change';
     }
+
+
+
     control.remove();
     control = L.Routing.control({
       plan: L.Routing.plan(waypoints, {
@@ -243,12 +245,6 @@ function onEachHex(feature, layer) {
             draggable: false,
             icon: new newIcon({iconUrl: './images/marker.png'})
           })
-          .bindTooltip(waypointInfo,
-            {
-              permanent: true,
-              direction: 'top'
-            }
-          );
         }
       }),
       router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
@@ -257,9 +253,9 @@ function onEachHex(feature, layer) {
       routeWhileDragging: false,
       fitSelectedRoutes: false
         //routeWhileDragging: true
-
     });
     control.addTo(map);
+
     if(discountRatio > 0){
       console.log("Selected location is %f% cheaper", discountRatio);
     } else if(discountRatio < 0){
