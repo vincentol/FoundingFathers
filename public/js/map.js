@@ -328,6 +328,9 @@ arr[351] = 300;
 arr[352] = 000;
 */
 
+
+
+
   for(var x = 0; x < Object.keys(hexgrid.features).length; x++) {
     hexgrid.features[x].properties['pt_count'] = prices[x];
     /*https://github.com/GIScience/osmatrix-client/blob/master/js/osmatrix.js
@@ -340,7 +343,7 @@ arr[352] = 000;
 
 function addMarkers()
 {
-    marker1 = L.marker([32.876, -117.238])
+    marker1 = L.marker([32.873, -117.238])
       .bindTooltip("81% Cheaper <br> 7min walk",
           {
             permanent: true,
@@ -348,7 +351,7 @@ function addMarkers()
           }
     ).addTo(map);
 
-    marker2 = L.marker([32.878, -117.2457])
+    marker2 = L.marker([32.879, -117.2482])
       .bindTooltip("35% Cheaper <br> 11min walk",
           {
             permanent: true,
