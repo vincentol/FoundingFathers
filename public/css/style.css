@@ -6,8 +6,6 @@
   color: white;
 }
 
-
-
 .mymap{
   margin-top: 6px;
   margin-left: 0px;
@@ -33,6 +31,11 @@
 
 .surge-checkbox{
     font-size: 16px;
+}
+
+.tooltip {
+  width: 150px;
+  height: 25px;
 }
 
 .info {
