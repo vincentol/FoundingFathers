@@ -7,8 +7,8 @@ Sean: Started milestone file & description. Attemped various means to convert ro
 Robert: 
 
 Screenshot:
-[Screenshot of core map functionality:](http://i.imgur.com/GpNob05.png)
-[Screenshot of menu:](http://i.imgur.com/K8oUAa2.png)
+![Screenshot of core map functionality:](http://i.imgur.com/GpNob05.png)
+![Screenshot of menu:](http://i.imgur.com/K8oUAa2.png)
 
 Description: (brief description of completed features)
 
