@@ -349,7 +349,7 @@ function addMarkers()
             permanent: true,
             direction: 'top',
           }
-    ).addTo(map);
+    ).setOpacity(0).addTo(map);
 
     marker2 = L.marker([32.879, -117.2482])
       .bindTooltip("35% Cheaper <br> 11min walk",
@@ -357,7 +357,7 @@ function addMarkers()
             permanent: true,
             direction: 'top'
           }
-    ).addTo(map);
+    ).setOpacity(0).addTo(map);
 
 }
 

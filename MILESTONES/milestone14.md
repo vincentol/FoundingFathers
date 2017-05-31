@@ -1,4 +1,4 @@
-Vincent: (Edited routing detail box to display relative pricing information to the end user.)
+Vincent: (Edited routing detail box to display relative pricing information to the end user. Made suggestion markers transparent based on user feedback.
 
 Ruoqi: Adjusted the locations of markers to the bound of surge zones. Added screenshots to milestone file.
 
