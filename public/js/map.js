@@ -235,8 +235,6 @@ function onEachHex(feature, layer) {
       waypointInfo = 'No change';
     }
 
-    var popuplatlng;
-
     control.remove();
     control = L.Routing.control({
       plan: L.Routing.plan(waypoints, {
@@ -256,21 +254,6 @@ function onEachHex(feature, layer) {
         //routeWhileDragging: true
     });
     control.addTo(map);
-
-    marker2 = L.marker(popuplatlng)
-        .bindTooltip(''+waypointInfo,
-            {
-              permanent: true,
-              direction: 'top',
-              interactive: true,
-              className: 'tooltip',
-              tooltipAnchor: (0,10)
-
-            }
-      ).setOpacity(0).addTo(map);
-
-
-
     if(discountRatio > 0){
       console.log("Selected location is %f% cheaper", discountRatio);
     } else if(discountRatio < 0){
