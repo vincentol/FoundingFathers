@@ -40,9 +40,6 @@ var newIcon = L.Icon.extend({
     });
 
 
-
-
-
 addMarkers();
 
 function createButton(label, container) {
@@ -221,13 +218,23 @@ function onEachHex(feature, layer) {
   layer.setStyle(hexStyleDefault);
   layer.on('click', function(e) {
     var toset;
+    var waypointInfo;
     discountRatio = calculateSave(feature.properties.pt_count);
     if (discountRatio > 0)
+    {
       toset = 'selected location is ' + discountRatio + '% cheaper';
+      waypointInfo = '' + discountRatio + '% cheaper';
+    }
     else if (discountRatio < 0)
+    {
       toset = 'selected location is ' + -discountRatio + '% more expensive';
+      waypointInfo = '' + -discountRatio + '% more expensive';
+    }
     else
+    {
       toset = 'selected location is the same price';
+      waypointInfo = 'No change';
+    }
     control.remove();
     control = L.Routing.control({
       plan: L.Routing.plan(waypoints, {
@@ -235,7 +242,13 @@ function onEachHex(feature, layer) {
           return L.marker(wp.latLng, {
             draggable: false,
             icon: new newIcon({iconUrl: './images/marker.png'})
-          });
+          })
+          .bindTooltip(waypointInfo,
+            {
+              permanent: true,
+              direction: 'top'
+            }
+          );
         }
       }),
       router: L.Routing.mapzen("mapzen-2DryXS8", {costing:"pedestrian"}),
